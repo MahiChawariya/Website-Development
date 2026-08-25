@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Admin - Quotes</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#eef3fb;
+    padding:40px;
+}
+
+.container{
+    width:95%;
+    margin:auto;
+    background:white;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 0 10px #ccc;
+}
+
+h2{
+    text-align:center;
+    color:#1d3557;
+    margin-bottom:25px;
+}
+
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+
+th{
+    background:#1d3557;
+    color:white;
+    padding:12px;
+}
+
+
+td{
+    padding:10px;
+    text-align:center;
+    border:1px solid #ddd;
+}
+
+
+tr:hover{
+    background:#f1f5ff;
+}
+
+
+.back-btn{
+
+    display:inline-block;
+    margin-top:20px;
+    padding:10px 20px;
+    background:#1d3557;
+    color:white;
+    text-decoration:none;
+    border-radius:5px;
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+<h2>Customer Quote Requests</h2>
+
+
+<table>
+
+<tr>
+
+<th>ID</th>
+<th>Name</th>
+<th>Email</th>
+<th>Phone</th>
+<th>Insurance Type</th>
+<th>City</th>
+
+</tr>
+
+
+{% for quote in quotes %}
+
+<tr>
+
+<td>{{ quote[0] }}</td>
+
+<td>{{ quote[1] }}</td>
+
+<td>{{ quote[2] }}</td>
+
+<td>{{ quote[3] }}</td>
+
+<td>{{ quote[4] }}</td>
+
+<td>{{ quote[5] }}</td>
+
+
+</tr>
+
+{% endfor %}
+
+
+</table>
+
+
+<a href="/admin" class="back-btn">Back</a>
+
+
+</div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Admin - Student Insurance</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#eef3fb;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:40px auto;
+    background:#fff;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+h1{
+    text-align:center;
+    color:#1d3d7c;
+    margin-bottom:30px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+th{
+    background:#1d3d7c;
+    color:white;
+    padding:14px;
+}
+
+td{
+    border:1px solid #ddd;
+    padding:12px;
+    text-align:center;
+}
+
+tr:nth-child(even){
+    background:#f8f8f8;
+}
+
+.back-btn{
+    display:inline-block;
+    margin-top:25px;
+    text-decoration:none;
+    background:#1d3d7c;
+    color:white;
+    padding:12px 22px;
+    border-radius:6px;
+}
+
+.back-btn:hover{
+    background:#17325f;
+}
+
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+<h1>Student Insurance Applications</h1>
+
+<table>
+
+<tr>
+    <th>ID</th>
+    <th>Student Name</th>
+    <th>Guardian Name</th>
+    <th>Email</th>
+    <th>Phone</th>
+    <th>College</th>
+    <th>Course</th>
+    <th>DOB</th>
+    <th>City</th>
+</tr>
+
+{% for student in students %}
+
+<tr>
+
+<td>{{ student[0] }}</td>
+<td>{{ student[1] }}</td>
+<td>{{ student[2] }}</td>
+<td>{{ student[3] }}</td>
+<td>{{ student[4] }}</td>
+<td>{{ student[5] }}</td>
+<td>{{ student[6] }}</td>
+<td>{{ student[7] }}</td>
+<td>{{ student[8] }}</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+<a href="/admin" class="back-btn">Back</a>
+
+</div>
+
+</body>
+</html>

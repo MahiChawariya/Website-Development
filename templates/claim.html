@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insurance Claim</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#eef3fb;
+}
+
+.container{
+    max-width:700px;
+    margin:40px auto;
+    background:#fff;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.1);
+}
+
+h2{
+    text-align:center;
+    color:#23408e;
+    margin-bottom:25px;
+    font-size:30px;
+}
+
+label{
+    display:block;
+    margin-top:15px;
+    margin-bottom:6px;
+    font-size:16px;
+    font-weight:bold;
+}
+
+input,
+select,
+textarea{
+    width:100%;
+    padding:10px;
+    font-size:15px;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+
+textarea{
+    resize:vertical;
+}
+
+button{
+    width:100%;
+    margin-top:25px;
+    padding:12px;
+    font-size:17px;
+    background:#23408e;
+    color:white;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#1a2f74;
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+<h2>Insurance Claim Form</h2>
+
+<form action="/claim" method="POST" enctype="multipart/form-data">
+
+<label>Full Name</label>
+<input type="text" name="fullname" placeholder="Enter your full name" required>
+
+<label>Email</label>
+<input type="email" name="email" placeholder="Enter your email" required>
+
+<label>Mobile Number</label>
+<input type="tel" name="mobile" placeholder="Enter your mobile number" required>
+
+<label>Policy Number</label>
+<input type="text" name="policy_number" placeholder="Enter policy number" required>
+
+<label>Insurance Type</label>
+<select name="insurance_type" required>
+    <option value="">Select Insurance Type</option>
+    <option>Health Insurance</option>
+    <option>Motor Insurance</option>
+    <option>Student Insurance</option>
+    <option>Life Insurance</option>
+</select>
+
+<label>Date of Incident</label>
+<input type="date" name="incident_date" required>
+
+<label>Claim Amount (₹)</label>
+<input type="number" name="claim_amount" placeholder="Enter claim amount" required>
+
+<label>Claim Description</label>
+<textarea name="description" rows="4" placeholder="Describe your claim..." required></textarea>
+
+<label>Upload Supporting Document</label>
+<input type="file" name="document">
+
+<button type="submit">Submit Claim Request</button>
+
+</form>
+
+</div>
+
+</body>
+</html>

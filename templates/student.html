@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Insurance</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#eef3fb;
+}
+
+.container{
+    max-width:700px;
+    margin:40px auto;
+    background:#fff;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.1);
+}
+
+h2{
+    text-align:center;
+    color:#23408e;
+    margin-bottom:25px;
+    font-size:30px;
+}
+
+label{
+    display:block;
+    margin-top:15px;
+    margin-bottom:6px;
+    font-size:16px;
+    font-weight:bold;
+}
+
+input,
+select,
+textarea{
+    width:100%;
+    padding:10px;
+    font-size:15px;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+
+button{
+    width:100%;
+    margin-top:25px;
+    padding:12px;
+    font-size:17px;
+    background:#23408e;
+    color:white;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#1a2f74;
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+<h2>Student Insurance Form</h2>
+
+<form action="/student" method="POST">
+
+<label>Student Name</label>
+<input type="text" name="student_name" placeholder="Enter student name" required>
+
+<label>Parent/Guardian Name</label>
+<input type="text" name="guardian_name" placeholder="Enter parent/guardian name" required>
+
+<label>Email</label>
+<input type="email" name="email" placeholder="Enter your email" required>
+
+<label>Mobile Number</label>
+<input type="tel" name="mobile" placeholder="Enter mobile number" required>
+
+<label>School / College Name</label>
+<input type="text" name="college" placeholder="Enter school or college name" required>
+
+<label>Course / Class</label>
+<input type="text" name="course" placeholder="Example: B.Com Semester III" required>
+
+<label>Date of Birth</label>
+<input type="date" name="dob" required>
+
+<label>City</label>
+<input type="text" name="city" placeholder="Enter city" required>
+
+<button type="submit">Apply for Student Insurance</button>
+
+</form>
+
+</div>
+
+</body>
+</html>

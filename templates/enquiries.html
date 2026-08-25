@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Admin - Enquiries</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#eef3fb;
+}
+
+.container{
+    width:90%;
+    max-width:1300px;
+    margin:40px auto;
+    background:#fff;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+h1{
+    text-align:center;
+    color:#23408e;
+    margin-bottom:30px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+th{
+    background:#23408e;
+    color:white;
+    padding:14px;
+}
+
+td{
+    border:1px solid #ddd;
+    padding:12px;
+    text-align:center;
+}
+
+tr:nth-child(even){
+    background:#f8f8f8;
+}
+
+.back-btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:10px 20px;
+    background:#23408e;
+    color:white;
+    text-decoration:none;
+    border-radius:5px;
+}
+
+.back-btn:hover{
+    background:#1b3170;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Customer Enquiries</h1>
+
+<table>
+
+<tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Phone</th>
+    <th>Company</th>
+    <th>Service</th>
+    <th>Message</th>
+</tr>
+
+{% for enquiry in enquiries %}
+
+<tr>
+
+<td>{{ enquiry[0] }}</td>
+<td>{{ enquiry[1] }}</td>
+<td>{{ enquiry[2] }}</td>
+<td>{{ enquiry[3] }}</td>
+<td>{{ enquiry[4] }}</td>
+<td>{{ enquiry[5] }}</td>
+<td>{{ enquiry[6] }}</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+<br>
+
+<a href="/admin" class="back-btn">Back</a>
+
+</div>
+
+</body>
+</html>

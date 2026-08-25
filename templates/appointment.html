@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Appointment Booking</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#eef3fb;
+}
+
+.container{
+    max-width:700px;
+    margin:40px auto;
+    background:#fff;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.1);
+}
+
+h2{
+    text-align:center;
+    color:#23408e;
+    margin-bottom:25px;
+    font-size:30px;
+}
+
+label{
+    display:block;
+    margin-top:15px;
+    margin-bottom:6px;
+    font-size:16px;
+    font-weight:bold;
+}
+
+input,
+select,
+textarea{
+    width:100%;
+    padding:10px;
+    font-size:15px;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+
+textarea{
+    resize:vertical;
+}
+
+button{
+    width:100%;
+    margin-top:25px;
+    padding:12px;
+    font-size:17px;
+    background:#23408e;
+    color:white;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#1a2f74;
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+<h2>Appointment Booking</h2>
+
+<form action="/appointment" method="POST">
+
+<label>Full Name</label>
+<input type="text" name="fullname" placeholder="Enter your full name" required>
+
+<label>Email</label>
+<input type="email" name="email" placeholder="Enter your email" required>
+
+<label>Mobile Number</label>
+<input type="tel" name="mobile" placeholder="Enter your mobile number" required>
+
+<label>Insurance Type</label>
+<select name="insurance_type" required>
+    <option value="">Select Insurance Type</option>
+    <option>Health Insurance</option>
+    <option>Motor Insurance</option>
+    <option>Student Insurance</option>
+    <option>Life Insurance</option>
+</select>
+
+<label>Preferred Date</label>
+<input type="date" name="appointment_date" required>
+
+<label>Preferred Time</label>
+<input type="time" name="appointment_time" required>
+
+<label>Appointment Mode</label>
+<select name="mode" required>
+    <option value="">Select Mode</option>
+    <option>Office Visit</option>
+    <option>Online Meeting</option>
+    <option>Phone Call</option>
+</select>
+
+<label>Additional Message</label>
+<textarea name="message" rows="4" placeholder="Write your message (optional)"></textarea>
+
+<button type="submit">Book Appointment</button>
+
+</form>
+
+</div>
+
+</body>
+</html>

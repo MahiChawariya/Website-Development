@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<title>Admin - Claims</title>
+
+<style>
+
+body{
+    font-family:Arial;
+    background:#eef3fb;
+    padding:40px;
+}
+
+.container{
+    background:white;
+    width:95%;
+    margin:auto;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 0 10px #ccc;
+}
+
+h2{
+    text-align:center;
+    color:#23408e;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:25px;
+}
+
+th{
+    background:#23408e;
+    color:white;
+    padding:12px;
+}
+
+td{
+    padding:10px;
+    border:1px solid #ddd;
+    text-align:center;
+}
+
+.back{
+    display:inline-block;
+    margin-top:20px;
+    padding:10px 20px;
+    background:#23408e;
+    color:white;
+    text-decoration:none;
+    border-radius:5px;
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+<div class="container">
+
+<h2>Customer Claims Details</h2>
+
+
+<table>
+
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>Email</th>
+<th>Phone</th>
+<th>Policy Number</th>
+<th>Claim Reason</th>
+</tr>
+
+
+{% for claim in claims %}
+
+<tr>
+
+<td>{{claim[0]}}</td>
+<td>{{claim[1]}}</td>
+<td>{{claim[2]}}</td>
+<td>{{claim[3]}}</td>
+<td>{{claim[4]}}</td>
+<td>{{claim[5]}}</td>
+
+</tr>
+
+{% endfor %}
+
+
+</table>
+
+
+<a href="/admin" class="back">Back</a>
+
+
+</div>
+
+
+</body>
+</html>

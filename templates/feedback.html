@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Feedback</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#eef3fb;
+}
+
+.container{
+    max-width:700px;
+    margin:40px auto;
+    background:#fff;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.1);
+}
+
+h2{
+    text-align:center;
+    color:#23408e;
+    margin-bottom:25px;
+    font-size:30px;
+}
+
+label{
+    display:block;
+    margin-top:15px;
+    margin-bottom:6px;
+    font-size:16px;
+    font-weight:bold;
+}
+
+input,
+select,
+textarea{
+    width:100%;
+    padding:10px;
+    font-size:15px;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+
+textarea{
+    resize:vertical;
+}
+
+button{
+    width:100%;
+    margin-top:25px;
+    padding:12px;
+    font-size:17px;
+    background:#23408e;
+    color:white;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#1a2f74;
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+<h2>Feedback Form</h2>
+
+<form action="/feedback" method="POST">
+
+<label>Full Name</label>
+<input type="text" name="fullname" placeholder="Enter your full name" required>
+
+<label>Email</label>
+<input type="email" name="email" placeholder="Enter your email" required>
+
+<label>Mobile Number</label>
+<input type="tel" name="phone" placeholder="Enter your mobile number">
+
+<label>Rate Our Service</label>
+<select name="rating" required>
+    <option value="">Select Rating</option>
+    <option>⭐⭐⭐⭐⭐ Excellent</option>
+    <option>⭐⭐⭐⭐ Very Good</option>
+    <option>⭐⭐⭐ Good</option>
+    <option>⭐⭐ Fair</option>
+    <option>⭐ Poor</option>
+</select>
+
+<label>Feedback</label>
+<textarea name="feedback" rows="5" placeholder="Share your experience with us..." required></textarea>
+
+<button type="submit">Submit Feedback</button>
+
+</form>
+
+</div>
+
+</body>
+</html>

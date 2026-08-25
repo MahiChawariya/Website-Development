@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Admin Panel</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#eef3fb;
+}
+
+.container{
+    max-width:900px;
+    margin:40px auto;
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.1);
+}
+
+h1{
+    text-align:center;
+    color:#23408e;
+    margin-bottom:30px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.card{
+    background:#23408e;
+    color:white;
+    padding:25px;
+    text-align:center;
+    border-radius:8px;
+}
+
+.card h3{
+    margin-bottom:15px;
+}
+
+button{
+    padding:10px 20px;
+    border:none;
+    background:white;
+    color:#23408e;
+    border-radius:5px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+button:hover{
+    background:#ddd;
+}
+
+@media(max-width:600px){
+    .cards{
+        grid-template-columns:1fr;
+    }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Insurance Admin Panel</h1>
+
+<div class="cards">
+
+<div class="card">
+<h3>Quotes</h3>
+<a href="/admin/quotes">
+<button>View Quotes</button>
+</a>
+</div>
+
+
+<div class="card">
+<h3>Renewals</h3>
+<a href="/admin/renewals">
+<button>View Renewals</button>
+</a>
+</div>
+
+
+<div class="card">
+<h3>Claims</h3>
+<a href="/admin/claims">
+<button>View Claims</button>
+</a>
+</div>
+
+
+<div class="card">
+<h3>Appointments</h3>
+<a href="/admin/appointments">
+<button>View Appointments</button>
+</a>
+</div>
+
+
+<div class="card">
+<h3>Student Insurance</h3>
+<a href="/admin/students">
+<button>View Students</button>
+</a>
+</div>
+
+
+<div class="card">
+<h3>Health Insurance</h3>
+<a href="/admin/health">
+<button>View Health</button>
+</a>
+</div>
+
+
+<div class="card">
+<h3>Motor Insurance</h3>
+<a href="/admin/motor">
+<button>View Motor</button>
+</a>
+</div>
+
+
+<div class="card">
+<h3>Feedback</h3>
+<a href="/admin/feedback">
+<button>View Feedback</button>
+</a>
+</div>
+
+<div class="card">
+<h3>Enquiries</h3>
+<a href="/admin/enquiries">
+<button>View Enquiries</button>    
+</a>
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>

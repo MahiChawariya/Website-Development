@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<title>Admin - Appointments</title>
+
+<style>
+
+body{
+    font-family:Arial;
+    background:#eef3fb;
+    padding:40px;
+}
+
+
+.container{
+    background:white;
+    width:95%;
+    margin:auto;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 0 10px #ccc;
+}
+
+
+h2{
+    text-align:center;
+    color:#23408e;
+}
+
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:25px;
+}
+
+
+th{
+    background:#23408e;
+    color:white;
+    padding:12px;
+}
+
+
+td{
+    padding:10px;
+    border:1px solid #ddd;
+    text-align:center;
+}
+
+
+.back{
+    display:inline-block;
+    margin-top:20px;
+    padding:10px 20px;
+    background:#23408e;
+    color:white;
+    text-decoration:none;
+    border-radius:5px;
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+<div class="container">
+
+<h2>Customer Appointment Details</h2>
+
+
+<table>
+
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>Email</th>
+<th>Phone</th>
+<th>Date</th>
+<th>Service</th>
+</tr>
+
+
+{% for appointment in appointments %}
+
+<tr>
+
+<td>{{appointment[0]}}</td>
+<td>{{appointment[1]}}</td>
+<td>{{appointment[2]}}</td>
+<td>{{appointment[3]}}</td>
+<td>{{appointment[4]}}</td>
+<td>{{appointment[5]}}</td>
+
+</tr>
+
+{% endfor %}
+
+
+</table>
+
+
+<a href="/admin" class="back">Back</a>
+
+
+</div>
+
+</body>
+
+</html>

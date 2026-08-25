@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin - Health Insurance</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#eef3fb;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:40px auto;
+    background:#fff;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+h1{
+    text-align:center;
+    color:#1d3d7c;
+    margin-bottom:30px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+th{
+    background:#1d3d7c;
+    color:#fff;
+    padding:14px;
+}
+
+td{
+    border:1px solid #ddd;
+    padding:12px;
+    text-align:center;
+}
+
+tr:nth-child(even){
+    background:#f5f5f5;
+}
+
+.back-btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:10px 20px;
+    background:#1d3d7c;
+    color:white;
+    text-decoration:none;
+    border-radius:5px;
+}
+
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+<h1>Health Insurance Applications</h1>
+
+<table>
+
+<tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Phone</th>
+    <th>Age</th>
+    <th>Gender</th>
+    <th>City</th>
+    <th>Coverage</th>
+    <th>Medical History</th>
+</tr>
+
+{% for health in health %}
+
+<tr>
+
+<td>{{ health[0] }}</td>
+<td>{{ health[1] }}</td>
+<td>{{ health[2] }}</td>
+<td>{{ health[3] }}</td>
+<td>{{ health[4] }}</td>
+<td>{{ health[5] }}</td>
+<td>{{ health[6] }}</td>
+<td>{{ health[7] }}</td>
+<td>{{ health[8] }}</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+<a href="/admin" class="back-btn">Back</a>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Policy Renewal Form</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background:#f4f7fb;
+            margin:0;
+            padding:0;
+        }
+
+        .container{
+            width:50%;
+            margin:40px auto;
+            background:#fff;
+            padding:30px;
+            border-radius:10px;
+            box-shadow:0 0 10px rgba(0,0,0,.15);
+        }
+
+        h2{
+            text-align:center;
+            color:#1f3c88;
+            margin-bottom:20px;
+        }
+
+        label{
+            font-weight:bold;
+        }
+
+        input{
+            width:100%;
+            padding:10px;
+            margin-top:5px;
+            margin-bottom:15px;
+            border:1px solid #ccc;
+            border-radius:5px;
+            font-size:15px;
+        }
+
+        button{
+            width:100%;
+            padding:12px;
+            background:#1f3c88;
+            color:white;
+            border:none;
+            border-radius:5px;
+            font-size:16px;
+            cursor:pointer;
+        }
+
+        button:hover{
+            background:#16306c;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Policy Renewal Form</h2>
+
+<form method="POST" action="/renewal">
+
+<label>Full Name</label>
+<input type="text" name="name" required>
+
+<label>Email</label>
+<input type="email" name="email" required>
+
+<label>Mobile Number</label>
+<input type="text" name="phone" required>
+
+<label>Policy Number</label>
+<input type="text" name="policy_number" required>
+
+<label>Policy Expiry Date</label>
+<input type="date" name="expiry_date" required>
+
+<button type="submit">Submit Renewal Request</button>
+
+</form>
+
+</div>
+
+</body>
+</html>
